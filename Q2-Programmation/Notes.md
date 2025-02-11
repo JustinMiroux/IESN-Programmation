@@ -4,7 +4,7 @@
 
 * ``python3 -m venv .venv`` : Créer un nouvelle environement virtuel dans le dossier .venv
 * ``source .venv/bin/activate`` : Active l'environement virtuel (Linux)
-* ``.\.venv\script\activate.ps1`` : Active l'environement virtuel (Windows Powershell)
+* ``.\.venv\script\activate.ps1`` : Active l'environement virtuel (Windows Powershell) ! Ne pas lancer python3 dans le venv (ne trouve pas les modules importer)
 * ``.\.venv\script\activate.bat`` : Active l'environement virtuel (Windows CMD)
 * ``deactivate`` : Désactive l'environement
 * ``pip3 install matplotlib`` : Installer les libraries
