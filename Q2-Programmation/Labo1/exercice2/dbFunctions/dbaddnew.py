@@ -8,7 +8,7 @@ with sqlite3.connect("db.sqlite") as conn:
 
 
     def db_add_new_summary():
-        """Add a new seummary in the DB"""
+        """Add a new summary in the DB"""
 
         cur = conn.cursor()
 

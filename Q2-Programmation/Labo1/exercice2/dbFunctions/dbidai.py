@@ -7,7 +7,7 @@ with sqlite3.connect("db.sqlite") as conn:
 
 
     def db_id_auto_incrementation():
-        """"Auto increment from size of list"""
+        """Auto increment from size of list"""
 
         cur = conn.cursor()
         cur.execute("SELECT * FROM stationsinfo")
