@@ -2,6 +2,7 @@
 
 import sqlite3
 from dbFunctions.dbaddnew import db_add_new_summary
+from dbFunctions.dbprintsummaries import db_print_all_from_date, db_print_all_from_station
 
 with sqlite3.connect("db.sqlite") as conn:
     print(type(conn))
@@ -29,6 +30,12 @@ with sqlite3.connect("db.sqlite") as conn:
 
         if CHOICE == "1":
             db_add_new_summary()
+
+        elif CHOICE == "2":
+            db_print_all_from_station()
+
+        elif CHOICE == "2":
+            db_print_all_from_date()
 
         elif CHOICE.lower() == "q":
             RUNNING = 0
