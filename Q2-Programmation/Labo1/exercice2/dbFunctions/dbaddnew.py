@@ -26,7 +26,7 @@ with sqlite3.connect("db.sqlite") as conn:
             else:
                 print("Direction non conforme veuilliez utiliser N-NE-E-SE-S-SO-O-NO")
 
-        db_temp = int(input("Temprérature (°C) : "))
+        db_temp = float(input("Temprérature (°C) : "))
 
         cur.execute("""INSERT INTO stationsinfo (id, date, windspeed, winddirection, temp)
                      VALUES (?, ?, ?, ?, ?)""",
