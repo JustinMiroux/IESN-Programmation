@@ -1,4 +1,5 @@
 """"Main file with menu"""
+# pylint: disable=W0401
 
 import sqlite3
 from dbFunctions.dbaddnew import db_add_new_summary
