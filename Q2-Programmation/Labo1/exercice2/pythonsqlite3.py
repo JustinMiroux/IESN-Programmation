@@ -41,6 +41,9 @@ with sqlite3.connect("db.sqlite") as conn:
         elif CHOICE == "4":
             db_print_all_from_wind_direction()
 
+        elif CHOICE == "5":
+            db_print_all_from_temp()
+
         elif CHOICE.lower() == "q":
             RUNNING = 0
             cur.close()

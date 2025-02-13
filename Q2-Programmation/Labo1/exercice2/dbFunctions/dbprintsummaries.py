@@ -59,7 +59,7 @@ with sqlite3.connect("db.sqlite") as conn:
 
         for i in search_list:
 
-            cur.execute("SELECT * FROM stationsinfo WHERE windspeed = ?", i)
+            cur.execute("SELECT * FROM stationsinfo WHERE winddirection = ?", i)
 
             for row in cur.fetchall():
 
@@ -67,5 +67,19 @@ with sqlite3.connect("db.sqlite") as conn:
 
         for line in complete_query:
             print(line)
+
+        cur.close()
+
+
+    def db_print_all_from_temp():
+        """Print all summaries where the temperature is over the input"""
+
+        cur = conn.cursor()
+
+        db_temp = float(input("Entrer la température (°C) : "))
+        cur.execute("SELECT * FROM stationsinfo WHERE temp > ?", db_temp)
+
+        for row in cur.fetchall():
+            print(row)
 
         cur.close()
