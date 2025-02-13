@@ -36,7 +36,7 @@ with sqlite3.connect("db.sqlite") as conn:
 
         elif CHOICE == "3":
             db_print_all_from_date()
-        
+
         elif CHOICE == "4":
             db_print_all_from_wind_direction()
 

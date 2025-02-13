@@ -35,7 +35,7 @@ with sqlite3.connect("db.sqlite") as conn:
 
 
     def db_print_all_from_wind_direction():
-        """Print all summaries that have a this/those specific wind directions"""
+        """Print all summaries that have one or multiple specific wind directions"""
 
         cur = conn.cursor()
         query = 1
@@ -59,7 +59,7 @@ with sqlite3.connect("db.sqlite") as conn:
 
         for i in search_list:
 
-            cur.execute("SELECT * FROM stationsinfo WHERE date = ?", i)
+            cur.execute("SELECT * FROM stationsinfo WHERE windspeed = ?", i)
 
             for row in cur.fetchall():
 
