@@ -2,7 +2,7 @@
 
 import sqlite3
 from dbFunctions.dbaddnew import db_add_new_summary
-from dbFunctions.dbprintsummaries import db_print_all_from_date, db_print_all_from_station
+from dbFunctions.dbprintsummaries import *
 
 with sqlite3.connect("db.sqlite") as conn:
     print(type(conn))
@@ -34,8 +34,11 @@ with sqlite3.connect("db.sqlite") as conn:
         elif CHOICE == "2":
             db_print_all_from_station()
 
-        elif CHOICE == "2":
+        elif CHOICE == "3":
             db_print_all_from_date()
+        
+        elif CHOICE == "4":
+            db_print_all_from_wind_direction()
 
         elif CHOICE.lower() == "q":
             RUNNING = 0
