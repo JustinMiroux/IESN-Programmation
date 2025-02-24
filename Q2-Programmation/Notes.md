@@ -262,3 +262,5 @@ for future in concurrent.futures.as_completed(futures):
 
 print ("Finished")
 ```
+
+pour les insertion en db il faut des '' autour des ? qui sont des string
