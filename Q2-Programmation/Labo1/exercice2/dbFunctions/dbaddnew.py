@@ -12,6 +12,8 @@ with sqlite3.connect("db.sqlite") as conn:
 
         cur = conn.cursor()
 
+        param = []
+
         db_id = db_id_auto_incrementation()
         db_date = str(input("Date du relevé (dd/mm/yyyy) : "))
         db_wind_speed = int(input("Vitesse du vent (Km/H) : "))
@@ -29,7 +31,7 @@ with sqlite3.connect("db.sqlite") as conn:
         db_temp = float(input("Temprérature (°C) : "))
 
         cur.execute("""INSERT INTO stationsinfo (id, date, windspeed, winddirection, temp)
-                     VALUES (?, ?, ?, ?, ?)""",
+                     VALUES (?, '?', ?, '?', ?)""",
                      (db_id, db_date, db_wind_speed, db_wind_direction, db_temp))
 
         run_confirmation = 0

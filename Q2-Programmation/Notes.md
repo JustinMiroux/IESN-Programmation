@@ -85,6 +85,7 @@ with sqlite3.connect("db.sqlite") as conn:
         print(cru.rowcount)
         print(cur.execute("SELECT * FROM videogames WHERE name = 'fortnite'").fetchone())
 ```
+pour les insertion en db il faut des '' autour des ? qui sont des string
 * Pour la suppression de données
 ```python
 import sqlite3
@@ -263,4 +264,3 @@ for future in concurrent.futures.as_completed(futures):
 print ("Finished")
 ```
 
-pour les insertion en db il faut des '' autour des ? qui sont des string
