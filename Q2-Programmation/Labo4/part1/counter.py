@@ -2,7 +2,7 @@
 This program is a counter with a gui.
 It uses : 
     -Tkinter
-    -ttk from Tkinter
+    -ttk & messagebox from Tkinter
 
 And finally uses classes for clean code.
 """
@@ -78,7 +78,7 @@ class EnterXFrame:
             self.label.addx(int(self.value.get()))
         except ValueError as e:
             messagebox.showerror(title="Input Error",
-            message=f"Le nombre X que vous avez rentré n'a pas pu être transformer en entié ( {e} )")
+            message=f"Le nombre X que vous avez rentré n'a pas pu être transformé en entié ( {e} )")
 
 class ResetButton:
     """
