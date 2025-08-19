@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-""" Labo 2 - Exercice 1.1.x """
+""" Labo 2 - Exercice 1.1"""
 
 def printclass():
     """Print the class of the variables"""

@@ -115,6 +115,11 @@ with sqlite3.connect("db.sqlite") as conn:
 
 ### ! PARTIES MANQUANTE ! (Postgresql, ...)
 
+```bash
+# In the venv install binaries for psycopg
+pip install "psycopg[binary,pool]"
+```
+
 ## DOTENV
 
 Sert a mettre des mdp et compte utilisateur / paramètre dans un fichier autre que le code source.
